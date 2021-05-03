@@ -1,4 +1,8 @@
-const Filter = ({ getTodosAndSetState, findActiveTodos, findDoneTodos }) => {
+const Filter = ({
+  getTodosAndSetState,
+  getActiveTodosAndSetState,
+  getDoneTodosAndSetState,
+}) => {
   return (
     <ul className='nav nav-pills todo-nav'>
       <ul className='nav nav-pills todo-nav'>
@@ -15,7 +19,7 @@ const Filter = ({ getTodosAndSetState, findActiveTodos, findDoneTodos }) => {
           <button
             type='button'
             className='btn btn-link'
-            onClick={findActiveTodos}
+            onClick={getActiveTodosAndSetState}
           >
             Active
           </button>
@@ -24,7 +28,7 @@ const Filter = ({ getTodosAndSetState, findActiveTodos, findDoneTodos }) => {
           <button
             type='button'
             className='btn btn-link'
-            onClick={findDoneTodos}
+            onClick={getDoneTodosAndSetState}
           >
             Done
           </button>
